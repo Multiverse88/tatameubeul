@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TataMeubel</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-primary font-sans">
+    <!-- Navbar with fade-in animation -->
+    <nav class="fixed w-full bg-primary/80 backdrop-blur-md z-50 transition-all duration-300">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+          <a href="#" class="text-2xl font-light tracking-wider text-accent scale-in">TATAMEUBLE</a>
+          <div class="hidden md:flex space-x-12">
+            <a href="#beranda" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-1">BERANDA</a>
+            <a href="#layanan" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-2">LAYANAN</a>
+            <a href="#portfolio" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-3">PORTFOLIO</a>
+            <a href="#kontak" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-3">KONTAK</a>
+          </div>
+          <button id="menuBtn" class="md:hidden text-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu with slide animation -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md absolute w-full transform transition-all duration-300">
+        <div class="container mx-auto px-6 py-6 space-y-6">
+          <a href="#beranda" class="block text-sm text-text hover:text-accent transition-all">BERANDA</a>
+          <a href="#layanan" class="block text-sm text-text hover:text-accent transition-all">LAYANAN</a>
+          <a href="#portfolio" class="block text-sm text-text hover:text-accent transition-all">PORTFOLIO</a>
+          <a href="#kontak" class="block text-sm text-text hover:text-accent transition-all">KONTAK</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with parallax -->
+    <section id="beranda" class="relative h-screen overflow-hidden">
+      <div class="hero-image absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e" alt="Modern Sofa" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-0 bg-black/30">
+        <div class="container mx-auto px-6 h-full flex items-center">
+          <div class="max-w-2xl text-white">
+            <h1 class="text-3xl md:text-3xl font-light mb-6 animate-fade-up">Menciptakan Kenyamanan dengan Presisi, Menyempurnakan Ruang Anda.</h1>
+            <p class="text-lg md:text-xl mb-8 animate-fade-up delay-1">Spesialis pembuatan dan restorasi sofa premium dengan sentuhan modern</p>
+            <a href="#kontak" class="inline-block px-8 py-4 border border-white text-sm tracking-wider hover:bg-white hover:text-accent transition-all animate-fade-up delay-2">
+              Hubungi Kami
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section with staggered animations -->
+    <section id="layanan" class="py-24 bg-primary">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-light text-center mb-20 animate-fade-up">LAYANAN KAMI</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="animate-fade-up delay-1 hover-lift">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1550254478-ead40cc54513" alt="Custom Sofa" class="w-full h-80 object-cover image-zoom">
+            </div>
+            <h3 class="text-xl font-light mt-6 mb-4">CUSTOM SOFA</h3>
+            <p class="text-gray-600">Wujudkan sofa impian Anda dengan desain yang sepenuhnya dapat disesuaikan dengan kebutuhan dan gaya interior Anda.</p>
+          </div>
+          <div class="animate-fade-up delay-2 hover-lift">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e" alt="Restorasi" class="w-full h-80 object-cover image-zoom">
+            </div>
+            <h3 class="text-xl font-light mt-6 mb-4">RESTORASI</h3>
+            <p class="text-gray-600">Mengembalikan keindahan sofa klasik Anda dengan teknik restorasi modern dan material berkualitas tinggi.</p>
+          </div>
+          <div class="animate-fade-up delay-3 hover-lift">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125" alt="Reupholstery" class="w-full h-80 object-cover image-zoom">
+            </div>
+            <h3 class="text-xl font-light mt-6 mb-4">REUPHOLSTERY</h3>
+            <p class="text-gray-600">Perbarui tampilan sofa Anda dengan koleksi fabric premium dan pengerjaan yang detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section with carousel -->
+    <section id="portfolio" class="py-24 bg-secondary overflow-hidden">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-light text-center mb-20 animate-fade-up">PORTFOLIO KAMI</h2>
+        <div class="relative">
+          <div class="carousel flex overflow-x-auto hide-scrollbar">
+            <div class="carousel-item flex-none w-full md:w-1/2 lg:w-1/3 p-2">
+              <div class="relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1550254478-ead40cc54513" alt="Portfolio 1" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300">
+                  <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-sm tracking-wider">MODERN SECTIONAL SOFA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item flex-none w-full md:w-1/2 lg:w-1/3 p-2">
+              <div class="relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e" alt="Portfolio 2" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300">
+                  <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-sm tracking-wider">CLASSIC RESTORATION</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item flex-none w-full md:w-1/2 lg:w-1/3 p-2">
+              <div class="relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125" alt="Portfolio 3" class="w-full h-96 object-cover">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300">
+                  <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-sm tracking-wider">PREMIUM REUPHOLSTERY</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-24">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-light text-center mb-20 animate-fade-up">HUBUNGI KAMI</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div class="animate-fade-up delay-1">
+            <h3 class="text-xl font-light mb-8">LOKASI WORKSHOP</h3>
+            <div class="space-y-4 text-gray-600">
+              <p class="flex items-start hover-lift">
+                <span class="mr-4">📍</span>
+                Jl. Sofa Indah No. 123<br/>Jakarta Selatan, 12345
+              </p>
+              <p class="flex items-start hover-lift">
+                <span class="mr-4">📞</span>
+                +62 812-3456-7890
+              </p>
+              <p class="flex items-start hover-lift">
+                <span class="mr-4">✉️</span>
+                info@sofacare.com
+              </p>
+            </div>
+          </div>
+          <div class="animate-fade-up delay-2">
+            <h3 class="text-xl font-light mb-8">JAM OPERASIONAL</h3>
+            <div class="space-y-4 text-gray-600">
+              <p class="hover-lift">Senin - Jumat<br/>09.00 - 18.00</p>
+              <p class="hover-lift">Sabtu<br/>09.00 - 15.00</p>
+              <p class="hover-lift">Minggu<br/>Tutup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-accent text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center animate-fade-up">
+          <p class="text-sm tracking-wider">&copy; 2024 SOFACARE. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
