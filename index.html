@@ -1,18 +1,150 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TataMeubel</title>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+<head>
+    <!-- Pengaturan Dasar -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul dan Deskripsi SEO Bandung -->
+    <title>Tatameubel - Jasa Pembuatan & Servis Sofa Terbaik di Bandung dan Sekitarnya</title>
+    <meta name="description" content="Ahli servis sofa profesional di Bandung! Melayani pembuatan sofa custom, reparasi, dan ganti kain untuk Bandung, Cimahi, Kabupaten Bandung, dan sekitarnya.">
+    
+    <!-- Kata Kunci SEO Lokal -->
+    <meta name="keywords" content="servis sofa bandung, jasa sofa custom bandung, reparasi sofa cimahi, ganti kain sofa kabupaten bandung, tukang sofa profesional">
+    
+    <!-- Informasi Penulis -->
+    <meta name="author" content="Tatameubel Bandung">
+    
+    <!-- Kontrol Crawler -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Tatameubel - Ahli Sofa Custom & Servis di Bandung">
+    <meta property="og:description" content="Layanan profesional pembuatan dan servis sofa terbaik di wilayah Bandung Raya">
+    <meta property="og:url" content="https://www.tatameubel-bandung.com">
+    <meta property="og:image" content="https://www.tatameubel-bandung.com/images/tatameubel-bandung-og.jpg">
+    <meta property="business:contact_data:street_address" content="Jalan Raya Bandung">
+    <meta property="business:contact_data:locality" content="Bandung">
+    <meta property="business:contact_data:country" content="Indonesia">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tatameubel Bandung - Ahli Sofa Custom & Servis">
+    <meta name="twitter:description" content="Layanan profesional pembuatan sofa custom dan servis di Bandung, Cimahi, dan Kabupaten Bandung.">
+    <meta name="twitter:image" content="https://www.tatameubel-bandung.com/images/tatameubel-bandung-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.tatameubel-bandung.com">
+    
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang="x-default" href="https://www.tatameubel-bandung.com">
+    
+    <!-- Structured Data - Local Business Bandung -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tatameubel Bandung",
+        "image": "https://www.tatameubel-bandung.com/images/tatameubel-logo-bandung.jpg",
+        "description": "Spesialis pembuatan sofa custom dan servis sofa profesional di wilayah Bandung Raya",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jalan Raya Bandung",
+            "addressLocality": "Bandung",
+            "addressRegion": "Jawa Barat",
+            "postalCode": "40xxx",
+            "addressCountry": "ID"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-6.9175",
+            "longitude": "107.6191"
+        },
+        "url": "https://www.tatameubel-bandung.com",
+        "telephone": "+62 822-1234-5678",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "-6.9175",
+                "longitude": "107.6191"
+            },
+            "geoRadius": "50000"
+        },
+        "serviceArea": [
+            "Bandung",
+            "Cimahi",
+            "Kabupaten Bandung",
+            "Bandung Barat",
+            "Ngamprah",
+            "Padalarang"
+        ]
+    }
+    </script>
+
+    <!-- Local Business Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Tatameubel Bandung",
+        "description": "Layanan profesional pembuatan sofa custom dan servis di wilayah Bandung Raya",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Layanan Sofa",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pembuatan Sofa Custom"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Servis Reparasi Sofa"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ganti Kain Sofa"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-primary font-sans">
+</head>
+<body class="bg-primary font-sans">
     <!-- Navbar with fade-in animation -->
     <nav class="fixed w-full bg-primary/80 backdrop-blur-md z-50 transition-all duration-300">
       <div class="container mx-auto px-6">
         <div class="flex justify-between items-center h-20">
-          <a href="#" class="text-2xl font-light tracking-wider text-accent scale-in">TATAMEUBLE</a>
+          <a href="#" class="text-2xl font-light tracking-wider text-accent scale-in">TATAMEUBEL</a>
           <div class="hidden md:flex space-x-12">
             <a href="#beranda" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-1">BERANDA</a>
             <a href="#layanan" class="text-sm text-text hover:text-accent transition-all hover:translate-y-[-2px] scale-in delay-2">LAYANAN</a>
