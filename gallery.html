@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Pengerjaan Sofa - Tatameubel Bandung</title>
+    <meta name="description" content="Lihat hasil karya terbaik dari jasa pembuatan dan servis sofa Tatameubel Bandung. Portfolio pengerjaan sofa custom, reparasi, dan ganti kain sofa.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-lift {
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+        .gallery-filter.active {
+            background-color: #4B5563;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="text-2xl font-light tracking-wider text-gray-800">TATAMEUBEL</a>
+                <div class="hidden md:flex space-x-12">
+                    <a href="/#beranda" class="text-sm text-gray-600 hover:text-gray-800 transition-all hover:translate-y-[-2px]">BERANDA</a>
+                    <a href="/#layanan" class="text-sm text-gray-600 hover:text-gray-800 transition-all hover:translate-y-[-2px]">LAYANAN</a>
+                    <a href="/#portfolio" class="text-sm text-gray-600 hover:text-gray-800 transition-all hover:translate-y-[-2px]">PORTFOLIO</a>
+                    <a href="/gallery" class="text-sm text-gray-800 font-medium transition-all hover:translate-y-[-2px]">GALERI</a>
+                    <a href="/#kontak" class="text-sm text-gray-600 hover:text-gray-800 transition-all hover:translate-y-[-2px]">KONTAK</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white absolute w-full">
+            <div class="container mx-auto px-6 py-6 space-y-6">
+                <a href="/#beranda" class="block text-sm text-gray-600 hover:text-gray-800">BERANDA</a>
+                <a href="/#layanan" class="block text-sm text-gray-600 hover:text-gray-800">LAYANAN</a>
+                <a href="/#portfolio" class="block text-sm text-gray-600 hover:text-gray-800">PORTFOLIO</a>
+                <a href="/gallery" class="block text-sm text-gray-800 font-medium">GALERI</a>
+                <a href="/#kontak" class="block text-sm text-gray-600 hover:text-gray-800">KONTAK</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-b from-gray-800 to-gray-900">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-light text-center text-white mb-4">GALERI PENGERJAAN</h1>
+            <p class="text-lg text-center text-gray-300 max-w-2xl mx-auto">
+                Lihat hasil karya terbaik kami dalam pembuatan sofa custom, reparasi, dan ganti kain sofa
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="gallery-filter px-6 py-2 bg-gray-700 text-white rounded-full hover:bg-gray-800 transition-all active" data-category="semua">Semua</button>
+            <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition-all" data-category="video">Video</button>
+            <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition-all" data-category="custom">Sofa Custom</button>
+            <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition-all" data-category="reparasi">Reparasi</button>
+            <button class="gallery-filter px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition-all" data-category="ganti-kain">Ganti Kain</button>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="container mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="galleryGrid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="custom">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery1.jpg" 
+                         alt="Sofa Custom Modern" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Desain Sofa Modern</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="reparasi">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery2.jpg" 
+                         alt="Sofa Restoration" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Restorasi Sofa Klasik</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="ganti-kain">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery3.jpg" 
+                         alt="Sofa Reupholstery" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Penggantian Kain Sofa Premium</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="custom">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery4.jpg" 
+                         alt="Contemporary Sofa" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Desain Sofa Kontemporer</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="reparasi">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery5.jpg" 
+                         alt="Vintage Sofa" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Restorasi Sofa Vintage</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item group hover-lift cursor-pointer" data-category="ganti-kain">
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="/public/gallery6.jpg" 
+                         alt="Modern Fabric" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">Penggantian Kain Sofa Modern</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" style="display: none;">
+            <button id="loadMore" class="px-8 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-all hover-lift">
+                Lihat Lebih Banyak
+            </button>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90">
+        <button id="closeLightbox" class="absolute top-4 right-4 text-white hover:text-gray-300 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12M6 12h16M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <button id="prevImage" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="nextImage" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        <div class="flex items-center justify-center h-full">
+            <div id="lightboxContent" class="max-h-[90vh] max-w-[90vw]">
+                <img id="lightboxImage" src="" alt="" class="hidden max-h-[90vh] max-w-[90vw] object-contain">
+                <video id="lightboxVideo" class="hidden max-h-[90vh] max-w-[90vw] object-contain" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div id="lightboxCaption" class="absolute bottom-4 left-0 right-0 text-center text-white">
+            <h3 class="text-2xl font-light mb-2"></h3>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="bg-gray-800 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-light text-white mb-4">Tertarik dengan hasil kerja kami?</h2>
+            <p class="text-lg text-gray-300 mb-8">Hubungi kami sekarang untuk konsultasi gratis</p>
+            <a href="/#kontak" class="inline-block px-8 py-3 bg-white text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all hover-lift">
+                Hubungi Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-light mb-2">TATAMEUBEL</h3>
+                    <p class="text-gray-400">Spesialis Sofa Custom & Service</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <a href="/#beranda" class="text-sm text-gray-400 hover:text-white transition-all">BERANDA</a>
+                    <a href="/#layanan" class="text-sm text-gray-400 hover:text-white transition-all">LAYANAN</a>
+                    <a href="/#portfolio" class="text-sm text-gray-400 hover:text-white transition-all">PORTFOLIO</a>
+                    <a href="/gallery" class="text-sm text-white transition-all">GALERI</a>
+                    <a href="/#kontak" class="text-sm text-gray-400 hover:text-white transition-all">KONTAK</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2025 Tatameubel Bandung. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lightbox functionality
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxVideo = document.getElementById('lightboxVideo');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const closeLightbox = document.getElementById('closeLightbox');
+        const prevImage = document.getElementById('prevImage');
+        const nextImage = document.getElementById('nextImage');
+        let currentImageIndex = 0;
+        let currentGalleryItems = [];
+
+        function updateLightboxContent(index) {
+            const item = currentGalleryItems[index];
+            
+            // Hide both media elements initially
+            lightboxImage.classList.add('hidden');
+            lightboxVideo.classList.add('hidden');
+            
+            // Show the appropriate media element based on type
+            if (item.type === 'video') {
+                lightboxVideo.querySelector('source').src = item.src;
+                lightboxVideo.classList.remove('hidden');
+                // Reset and load the video
+                lightboxVideo.load();
+            } else {
+                lightboxImage.src = item.src;
+                lightboxImage.alt = item.title;
+                lightboxImage.classList.remove('hidden');
+            }
+            
+            lightboxCaption.querySelector('h3').textContent = item.title;
+            currentImageIndex = index;
+
+            // Update navigation buttons visibility
+            prevImage.style.display = index === 0 ? 'none' : 'block';
+            nextImage.style.display = index === currentGalleryItems.length - 1 ? 'none' : 'block';
+        }
+
+        function openLightbox(item) {
+            const activeCategory = document.querySelector('.gallery-filter.active').dataset.category;
+            currentGalleryItems = activeCategory === 'semua' 
+                ? [...initialGalleryItems, ...galleryData]
+                : [...initialGalleryItems, ...galleryData].filter(galleryItem => galleryItem.category === activeCategory);
+            
+            const index = currentGalleryItems.findIndex(galleryItem => 
+                galleryItem.src === item.src && 
+                galleryItem.title === item.title
+            );
+            
+            updateLightboxContent(index);
+            lightboxModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightboxModal() {
+            lightboxModal.classList.add('hidden');
+            document.body.style.overflow = '';
+            // Pause video if playing
+            lightboxVideo.pause();
+        }
+
+        // Event Listeners for Lightbox
+        closeLightbox.addEventListener('click', closeLightboxModal);
+        
+        prevImage.addEventListener('click', () => {
+            if (currentImageIndex > 0) {
+                updateLightboxContent(currentImageIndex - 1);
+            }
+        });
+        
+        nextImage.addEventListener('click', () => {
+            if (currentImageIndex < currentGalleryItems.length - 1) {
+                updateLightboxContent(currentImageIndex + 1);
+            }
+        });
+
+        // Close lightbox when clicking outside the image
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightboxModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightboxModal.classList.contains('hidden')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeLightboxModal();
+                    break;
+                case 'ArrowLeft':
+                    if (currentImageIndex > 0) {
+                        updateLightboxContent(currentImageIndex - 1);
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (currentImageIndex < currentGalleryItems.length - 1) {
+                        updateLightboxContent(currentImageIndex + 1);
+                    }
+                    break;
+            }
+        });
+
+        // Store initial gallery items
+        const initialGalleryItems = Array.from(document.querySelectorAll('.gallery-item')).map(item => {
+            const img = item.querySelector('img');
+            return {
+                type: 'image',
+                src: img.src,
+                title: img.alt,
+                category: item.dataset.category
+            };
+        });
+
+        // Update gallery item creation to include video support
+        function createGalleryItem(item) {
+            const newItem = document.createElement('div');
+            newItem.className = 'gallery-item group hover-lift cursor-pointer';
+            newItem.dataset.category = item.category;
+            
+            const isVideo = item.type === 'video';
+            const thumbnailSrc = isVideo ? item.thumbnail || item.src : item.src;
+            
+            newItem.innerHTML = `
+                <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
+                    <img src="${thumbnailSrc}" alt="${item.title}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    ${isVideo ? `
+                        <div class="absolute inset-0 flex items-center justify-center" data-type="video">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    ` : '<div data-type="image"></div>'}
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="text-xl font-light text-white mb-2">${item.title}</h3>
+                        </div>
+                    </div>
+                </div>
+            `;
+            newItem.addEventListener('click', () => openLightbox(item));
+            return newItem;
+        }
+
+        // Add click handlers to initial gallery items
+        document.querySelectorAll('.gallery-item').forEach((item, index) => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', () => openLightbox(initialGalleryItems[index]));
+        });
+
+        // Gallery Filter
+        const filterButtons = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-gray-700', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-gray-700', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                const category = button.dataset.category;
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const itemCategory = item.dataset.category;
+                    const itemType = item.querySelector('[data-type]')?.dataset.type;
+                    
+                    if (category === 'semua') {
+                        item.style.display = 'block';
+                    } else if (category === 'video') {
+                        item.style.display = itemType === 'video' ? 'block' : 'none';
+                    } else {
+                        item.style.display = (itemType !== 'video' && itemCategory === category) ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Gallery Data for Load More
+        const galleryData = [
+            {
+                type: 'video',
+                src: '/public/video1.mp4',
+                thumbnail: '/public/gallery1.jpg',
+                category: 'video',
+                subCategory: 'custom',
+                title: 'Proses Custom Sofa'
+            },
+            {
+                type: 'video',
+                src: '/public/video2.mp4',
+                thumbnail: '/public/gallery2.jpg',
+                category: 'video',
+                subCategory: 'reparasi',
+                title: 'Proses Reparasi Sofa'
+            },
+            {
+                type: 'video',
+                src: '/public/video3.mp4',
+                thumbnail: '/public/gallery3.jpg',
+                category: 'video',
+                subCategory: 'ganti-kain',
+                title: 'Proses Ganti Kain'
+            },
+            {
+                type: 'video',
+                src: '/public/gallery18.mp4',
+                thumbnail: '/public/gallery4.jpg',
+                category: 'video',
+                subCategory: 'custom',
+                title: 'Proyek Sofa Custom'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery1.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 1'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery2.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 2'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery3.jpg',
+                category: 'reparasi',
+                title: 'Proyek Reparasi 1'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery4.jpg',
+                category: 'reparasi',
+                title: 'Proyek Reparasi 2'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery5.jpg',
+                category: 'ganti-kain',
+                title: 'Ganti Kain Model 1'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery6.jpg',
+                category: 'ganti-kain',
+                title: 'Ganti Kain Model 2'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery7.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 3'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery8.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 4'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery9.jpg',
+                category: 'reparasi',
+                title: 'Proyek Reparasi 3'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery10.jpg',
+                category: 'reparasi',
+                title: 'Proyek Reparasi 4'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery11.jpg',
+                category: 'ganti-kain',
+                title: 'Ganti Kain Model 3'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery12.jpg',
+                category: 'ganti-kain',
+                title: 'Ganti Kain Model 4'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery13.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 5'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery14.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 6'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery16.jpg',
+                category: 'reparasi',
+                title: 'Proyek Reparasi 5'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery17.jpg',
+                category: 'ganti-kain',
+                title: 'Ganti Kain Model 5'
+            },
+            {
+                type: 'image',
+                src: '/public/gallery19.jpg',
+                category: 'custom',
+                title: 'Sofa Custom Model 7'
+            }
+        ];
+
+        // Initialize gallery with all items
+        function initializeGallery() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            
+            // Add all items
+            galleryData.forEach(item => {
+                const galleryItem = createGalleryItem(item);
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+
+        // Initialize gallery on page load
+        initializeGallery();
+    </script>
+</body>
+</html>
