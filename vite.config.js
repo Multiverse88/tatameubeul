@@ -1,14 +1,16 @@
-import { defineConfig } from 'vite'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
     port: 5173,
+    open: '/index.html'
   },
   build: {
     rollupOptions: {
       input: {
-        main: './index.html',
-        gallery: './gallery/index.html'
+        main: resolve(__dirname, 'index.html'),
+        gallery: resolve(__dirname, 'gallery.html')
       }
     }
   }
