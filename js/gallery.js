@@ -100,12 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             type: 'image',
-            src: 'public/gallery15.jpg',
-            category: 'ganti-kain',
-            title: 'Ganti Kain Model 4'
-        },
-        {
-            type: 'image',
             src: 'public/gallery16.jpg',
             category: 'custom',
             title: 'Sofa Custom Model 5'
@@ -118,9 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             type: 'image',
-            src: 'public/gallery18.jpg',
+            src: 'public/gallery19.jpg',
+            category: 'custom',
+            title: 'Sofa Custom Model 6'
+        },
+        {
+            type: 'image',
+            src: 'public/gallery7.jpg',
             category: 'ganti-kain',
-            title: 'Ganti Kain Model 5'
+            title: 'Ganti Kain Model 6'
+        },
+        {
+            type: 'image',
+            src: 'public/gallery8.jpg',
+            category: 'custom',
+            title: 'Sofa Custom Model 7'
+        },
+        {
+            type: 'image',
+            src: 'public/gallery9.jpg',
+            category: 'reparasi',
+            title: 'Proyek Reparasi 7'
         }
     ];
 
