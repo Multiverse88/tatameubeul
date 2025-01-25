@@ -12,6 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gallery data
     const galleryData = [
         {
+            type: 'video',
+            src: 'public/video1.mp4',
+            thumbnail: 'public/gallery7.jpg',
+            category: 'custom',
+            title: 'Proses Custom Sofa'
+        },
+        {
+            type: 'video',
+            src: 'public/video2.mp4',
+            thumbnail: 'public/gallery8.jpg',
+            category: 'reparasi',
+            title: 'Proses Reparasi Sofa'
+        },
+        {
+            type: 'video',
+            src: 'public/video3.mp4',
+            thumbnail: 'public/gallery9.jpg',
+            category: 'ganti-kain',
+            title: 'Proses Ganti Kain'
+        },
+        {
             type: 'image',
             src: 'public/gallery1.jpg',
             category: 'custom',
@@ -46,27 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             src: 'public/gallery6.jpg',
             category: 'ganti-kain',
             title: 'Ganti Kain Model 2'
-        },
-        {
-            type: 'video',
-            src: 'public/video1.mp4',
-            thumbnail: 'public/gallery7.jpg',
-            category: 'custom',
-            title: 'Proses Custom Sofa'
-        },
-        {
-            type: 'video',
-            src: 'public/video2.mp4',
-            thumbnail: 'public/gallery8.jpg',
-            category: 'reparasi',
-            title: 'Proses Reparasi Sofa'
-        },
-        {
-            type: 'video',
-            src: 'public/video3.mp4',
-            thumbnail: 'public/gallery9.jpg',
-            category: 'ganti-kain',
-            title: 'Proses Ganti Kain'
         },
         {
             type: 'image',
